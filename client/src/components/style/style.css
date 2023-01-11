@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  border: 0.2vw solid black;
+  border-radius: 3vw;
+  width: 20vw;
+  margin: 5vh auto;
+  height: fit-content;
+  background-color: #ffffff;
+  padding-bottom: 5vh;
+}
+
+.divForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.divHeader {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  margin: 2vh auto;
+  text-align: center;
+  padding: 1vh 0vw;
+  border-bottom: 0.2vw solid black;
+}
+
+.label {
+  width: 10vw;
+  margin: auto;
+}
+
+.input {
+  width: 10vw;
+  height: 4vh;
+  border-radius: 0.3vw;
+  padding: 0vh 0.5vw;
+}
+
+.button {
+  width: 10vw;
+  height: 4vh;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 0.5vw;
+}
+
+.button:hover {
+  background-color: #007c00;
+  color: #f7f7f7;
+}
+
+.link:link {
+  color: #33393f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.imgHome {
+  height: 5vh;
+  width: 5vw;
+}
+
+.homeButton {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 2vh 2vw;
+  align-items: center;
+}
+
+.main-link {
+  font-weight: 700;
+  border: 0.2vh solid;
+  border-radius: 2vh;
+  padding: 2vh 2vw;
+  background-color: #658fb3;
+}
+
+.main-link:hover {
+  color: #ffffff;
+  background-color: #70757a;
+}
+
+.divContainerGame {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  border: 0.2vw solid black;
+  width: fit-content;
+  margin: 5vh auto;
+  height: fit-content;
+  background-color: #ffffff;
+  border-radius: 2vh;
+}
+.divLevelSelector {
+  align-self: center;
+}
+
+.divGameInputs {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  align-self: center;
+  padding: 2vh 2vw;
+}
+
+.divGameLevel {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.divGameButton {
+  margin: auto;
+}
+.gameButton {
+  width: 10vw;
+  height: 5vh;
+}
+
+.gameInput {
+  width: 1vw;
+}
+
+.divNumbers,
+.divActualCode {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2vw;
+  align-self: center;
+  margin: 2vh auto;
+}
+
+.dropdown {
+  padding: 1vh 1vw;
+  margin: 2vh auto;
+  border: none;
+  font-weight: 900;
+}
+
+.green {
+  background-color: #059862;
+}
+
+.dot {
+  height: 3vh;
+  width: 2vw;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.blue {
+  background-color: #2800f0;
+}
+
+.notFoundParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 99vh;
+  width: 99vw;
+}
+
+.notFoundChild {
+  font-size: 5vh;
+  font-weight: 600;
+}
+
+.ml-3 {
+  margin-left: 3vw;
+  font-weight: 900;
+}
+
+.howToPlayHeader {
+  width: fit-content;
+  margin: 1vh auto;
+}
+
+.spanIHowToPlay {
+  font-size: 1vw;
+  font-weight: 600;
+  width: fit-content;
+  margin: 0vh 0vh;
+}
+
+.underline {
+  border-bottom: #33393f solid;
+}
