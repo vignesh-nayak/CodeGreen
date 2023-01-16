@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios';
 import mySvg from './Img/homeSvg.svg';
 
@@ -34,9 +34,9 @@ const Login = () => {
     return (
         <div className='divContainer'>
             <div className='divHeader'>
-                <a href="/">
-                    <img src={mySvg} alt="home icon" className='imgHome' />
-                </a>
+                <Link to="/">
+                    <img title='Go to Home page' src={mySvg} alt="home icon" className='imgHome' />
+                </Link>
                 <h1 >Login Form</h1>
             </div>
             <form className='divForm' onSubmit={onSubmit}>
@@ -51,12 +51,12 @@ const Login = () => {
                 <input type="submit" value="Submit" className='button' />
             </form>
             <label className='label'>
-                <a href="/forgotPassword" className='link'>Forgot Password?</a>
+                <Link to="/forgotPassword" className='link'>Forgot Password?</Link>
             </label>
             <label className='label'>
-                <a href="/register" className='link'>Create a new account.</a>
+                <Link to="/register" className='link'>Create a new account.</Link>
             </label>
-        </div>
+        </div >
     )
 }
 

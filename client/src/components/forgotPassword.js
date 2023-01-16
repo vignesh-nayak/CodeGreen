@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios';
 
 const ForgotPassword = () => {
@@ -60,7 +60,7 @@ const ForgotPassword = () => {
                 <input type="submit" value="Submit" className='button' />
             </form>
             <label className='label'>
-                <a href="/login" className='link'>Back to login.</a>
+                <Link to="/login" className='link'>Back to login.</Link>
             </label>
         </div>
     )

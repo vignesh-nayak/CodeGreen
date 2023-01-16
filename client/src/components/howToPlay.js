@@ -17,7 +17,7 @@ const HowToPlay = () => {
     const logout = () => {
         localStorage.removeItem('EmailForCodeBlue');
         localStorage.removeItem('blueCodeGameId');
-        navigate('/');
+        navigate('/login');
     }
 
     return (

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './style/style.css';
 
 const Main = () => {
@@ -9,8 +10,8 @@ const Main = () => {
 
     return (
         <div className='homeButton'>
-            <a href="/login" className='link main-link'>Login</a>
-            <a href="/register" className='link main-link'>Signup</a>
+            <Link to="/login" className='link main-link'>Login</Link>
+            <Link to="/register" className='link main-link'>Signup</Link>
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 const userInputObject = {
     inputOne: -1,
     inputTwo: -1,
@@ -47,7 +46,7 @@ const Game = () => {
     };
 
     const handleChange = async (e) => {
-        setValue(e.target.value);
+        setValue(e.target.value); // try with call back - fucntion
         await setNumbersFun(e);
 
         if (e.target.value === '0') {
@@ -84,7 +83,7 @@ const Game = () => {
     const logout = () => {
         localStorage.removeItem('EmailForCodeBlue');
         localStorage.removeItem('blueCodeGameId');
-        navigate('/');
+        navigate('/login');
     }
 
     const options = [
@@ -105,7 +104,7 @@ const Game = () => {
                             : options.map((option) => (<option disabled value={option.value}>{option.label}</option>))
                     }
                 </select>
-                <a title='how to play' href="/howToPlay" className='link ml-3'>?</a>
+                <Link title='how to play' to="/howToPlay" className='link ml-3'>?</Link>
             </div>
             <div className='divGameInputs'>
                 {

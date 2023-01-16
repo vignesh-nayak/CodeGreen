@@ -4,7 +4,7 @@ const NotFound = () => {
     return (
         <div className='notFoundParent'>
             <span className='notFoundChild'>
-                Page-not-Found
+                Page not found.
             </span>
         </div>
     )
