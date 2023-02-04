@@ -13,6 +13,7 @@ const getColors = (UIarr, DBarr) => {
     for (let index = 0; index < UIarr.length; index++) {
         if (UIarr[index] === DBarr[index]) {
             tempArr.push('G');
+            // tempArr[index] = 'G'; using index for more help for player.
             UIarr[index] = -1;
         }
     }
@@ -21,6 +22,9 @@ const getColors = (UIarr, DBarr) => {
             tempArr.push('B');
             UIarr[index] = -1;
         }
+    }
+    while (tempArr.length !== DBarr.length) {
+        tempArr.push('N');
     }
     return tempArr;
 }

@@ -9,13 +9,13 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const onSubmit = async (e) => {
         e.preventDefault();
         const post = { email: email, password: password };
         try {
-            console.log(post)
-            console.log(url)
+            setLoading(loading => !loading);
             const res = await axios.post(url, post);
             if (res.data.status === 'ok') {
                 localStorage.setItem('EmailForCodeBlue', email);
@@ -50,6 +50,20 @@ const Login = () => {
                 </label>
                 <input type="submit" value="Submit" className='button' />
             </form>
+            <div class='divDefaultUser'>
+                {loading ?
+                    <div className='loading'> Loading... wait for while.</div>
+                    :
+                    <div className='credentials'>
+                        <div>
+                            Email: admin@gmail.com
+                        </div>
+                        <div>
+                            Password : aadmin
+                        </div>
+                    </div>
+                }
+            </div>
             <label className='label'>
                 <Link to="/forgotPassword" className='link'>Forgot Password?</Link>
             </label>

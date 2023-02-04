@@ -1,3 +1,5 @@
+/* use tailwind CSS. */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +12,7 @@
   border: 0.2vw solid black;
   border-radius: 3vw;
   width: 20vw;
+  min-width: 300px;
   margin: 5vh auto;
   height: fit-content;
   background-color: #ffffff;
@@ -26,6 +29,7 @@
   display: flex;
   flex-direction: row;
   width: 20vw;
+  min-width: 300px;
   margin: 2vh auto;
   text-align: center;
   padding: 1vh 0vw;
@@ -34,18 +38,22 @@
 
 .label {
   width: 10vw;
+  min-width: 170px;
   margin: auto;
 }
 
 .input {
   width: 10vw;
+  min-width: 170px;
   height: 4vh;
   border-radius: 0.3vw;
   padding: 0vh 0.5vw;
+  text-align: center;
 }
 
 .button {
   width: 10vw;
+  min-width: 170px;
   height: 4vh;
   margin: auto;
   cursor: pointer;
@@ -59,13 +67,14 @@
 
 .link:link {
   color: #33393f;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 700;
 }
 
 .imgHome {
   height: 5vh;
   width: 5vw;
+  min-width: 86px;
 }
 
 .homeButton {
@@ -97,6 +106,7 @@
   width: fit-content;
   margin: 5vh auto;
   height: fit-content;
+  min-width: 300px;
   background-color: #ffffff;
   border-radius: 2vh;
 }
@@ -120,6 +130,10 @@
 
 .divGameButton {
   margin: auto;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .gameButton {
   width: 10vw;
@@ -128,6 +142,8 @@
 
 .gameInput {
   width: 1vw;
+  min-width: 25px;
+  min-height: 30px;
 }
 
 .divNumbers,
@@ -139,6 +155,10 @@
   margin: 2vh auto;
 }
 
+.divNumbers {
+  color: #658fb3;
+  font-weight: 600;
+}
 .dropdown {
   padding: 1vh 1vw;
   margin: 2vh auto;
@@ -153,12 +173,14 @@
 .dot {
   height: 3vh;
   width: 2vw;
+  min-width: 35px;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
   font-weight: bolder;
   color: #ffffff;
 }
+
 .blue {
   background-color: #2800f0;
 }
@@ -187,7 +209,7 @@
 }
 
 .spanIHowToPlay {
-  font-size: 1vw;
+  font-size: calc(0.5vw + 10px);
   font-weight: 600;
   width: fit-content;
   margin: 0vh 0vh;
@@ -195,4 +217,20 @@
 
 .underline {
   border-bottom: #33393f solid;
+}
+
+.black {
+  background-color: #29263bc7;
+}
+
+.divDefaultUser {
+  margin: 2vh auto;
+}
+
+.credentials {
+  color: #03017a6b;
+}
+
+.loading {
+  color: #c60000fc;
 }

@@ -34,7 +34,7 @@ const Game = () => {
             const data = { number: e.target.value, email: email };
             const res = await axios.post(url, data);
             if (res.data.status === 'ok') {
-                setNumbers([...res.data.numbers]);
+                setNumbers([...res.data.numbers.sort()]);
                 localStorage.setItem('blueCodeGameId', res.data.gameid);
             }
             else {
@@ -46,7 +46,7 @@ const Game = () => {
     };
 
     const handleChange = async (e) => {
-        setValue(e.target.value); // try with call back - fucntion
+        setValue(e.target.value);
         await setNumbersFun(e);
 
         if (e.target.value === '0') {
@@ -81,7 +81,7 @@ const Game = () => {
     }
 
     const logout = () => {
-        localStorage.removeItem('EmailForCodeBlue');
+        localStorage.removeItem('EmailForCodeBlue'); // use redux*/contextAPI.
         localStorage.removeItem('blueCodeGameId');
         navigate('/login');
     }
@@ -147,7 +147,7 @@ const Game = () => {
             </div>
             <div className='divNumbers'>
                 {
-                    numbers?.map(num => <span> {num}</span>)
+                    numbers?.map((num, index) => <span>  {num} {numbers.length !== index + 1 ? "-" : ""}</span>)
                 }
             </div>
             <div className='divGameButton'>
@@ -155,7 +155,7 @@ const Game = () => {
             </div>
             <div className='divActualCode'>
                 {
-                    color?.map(col => col === 'G' ? <span className='green dot'>G</span> : col === 'B' ? <span className='blue dot'>B</span> : '')
+                    color?.map(col => col === 'G' ? <span className='green dot'>G</span> : col === 'B' ? <span className='blue dot'>B</span> : <span className='black dot'></span>)
                 }
             </div>
             <div className='divGameButton'>
